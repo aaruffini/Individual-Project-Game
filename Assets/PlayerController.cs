@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using JetBrains.Annotations;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [Header("Configurations")]
     public float walkSpeed;
     public float runSpeed;
+    public float jumpForce;
 
 
 
@@ -36,6 +38,12 @@ public class PlayerController : MonoBehaviour
         newVelocity.x = Input.GetAxis("Horizontal") * speed;
         newVelocity.z = Input.GetAxis("Vertical") * speed;
         rb.linearVelocity = newVelocity;
+    }
+    void jump()
+    {
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        
     }
     
 }
