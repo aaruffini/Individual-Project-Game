@@ -7,6 +7,6 @@ using UnityEngine.AI;
 
 public class LightScript : MonoBehaviour
 {
-    
+    //git test
     
 }
