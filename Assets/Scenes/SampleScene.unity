@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 1163496650}
   - component: {fileID: 1163496653}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Red Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -685,6 +685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392d496c70d0546ad8d0c735d865edba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightScript
+  lightToControl: {fileID: 1163496651}
+  api: http://localhost:8080/api/state
 --- !u!1 &1201446172
 GameObject:
   m_ObjectHideFlags: 0
